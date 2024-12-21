@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXFileReference section */
-		A18FA7922D16FEC600AAB679 /* BostaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18FA8C82D170A4000AAB679 /* BostaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A18FA7A42D16FEC700AAB679 /* Exceptions for "BostaDemo" folder in "BostaDemo" target */ = {
+		A18FA8BB2D1708ED00AAB679 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,14 +21,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A18FA7942D16FEC600AAB679 /* BostaDemo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A18FA7A42D16FEC700AAB679 /* Exceptions for "BostaDemo" folder in "BostaDemo" target */,
-			);
-			path = BostaDemo;
-			sourceTree = "<group>";
-		};
+		A18FA8B42D1708EC00AAB679 /* BostaDemo */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (A18FA8BB2D1708ED00AAB679 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = BostaDemo; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +38,9 @@
 		A18FA7892D16FEC600AAB679 = {
 			isa = PBXGroup;
 			children = (
-				A18FA7942D16FEC600AAB679 /* BostaDemo */,
-				A18FA7932D16FEC600AAB679 /* Products */,
+				A18FA8B42D1708EC00AAB679 /* BostaDemo */,
+				A18FA8C82D170A4000AAB679 /* BostaDemo.app */,
 			);
-			sourceTree = "<group>";
-		};
-		A18FA7932D16FEC600AAB679 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A18FA7922D16FEC600AAB679 /* BostaDemo.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,13 +59,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A18FA7942D16FEC600AAB679 /* BostaDemo */,
+				A18FA8B42D1708EC00AAB679 /* BostaDemo */,
 			);
 			name = BostaDemo;
 			packageProductDependencies = (
 			);
 			productName = BostaDemo;
-			productReference = A18FA7922D16FEC600AAB679 /* BostaDemo.app */;
+			productReference = A18FA8C82D170A4000AAB679 /* BostaDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,6 +84,7 @@
 				};
 			};
 			buildConfigurationList = A18FA78D2D16FEC600AAB679 /* Build configuration list for PBXProject "BostaDemo" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -107,8 +93,7 @@
 			);
 			mainGroup = A18FA7892D16FEC600AAB679;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = A18FA7932D16FEC600AAB679 /* Products */;
+			productRefGroup = A18FA7892D16FEC600AAB679;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -150,9 +135,9 @@
 				INFOPLIST_FILE = BostaDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -178,9 +163,9 @@
 				INFOPLIST_FILE = BostaDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

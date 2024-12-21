@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        
-        let vc = ProfileVC(viewModel: ProfileVM())
+        let repo = Repository.create()
+        let vc = ProfileVC(viewModel: ProfileVM(repository: repo))
         window?.rootViewController = UINavigationController(rootViewController: vc)
         
         

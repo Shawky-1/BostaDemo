@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A18FA8C82D170A4000AAB679 /* BostaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18FA8C82D170A4000AAB679 /* BostaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = BostaDemo.app; path = "/Users/ahmedalabiad/Documents/Personal-Projects/BostaDemo/build/Debug-iphoneos/BostaDemo.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -39,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				A18FA8B42D1708EC00AAB679 /* BostaDemo */,
-				A18FA8C82D170A4000AAB679 /* BostaDemo.app */,
 			);
 			sourceTree = "<group>";
 		};

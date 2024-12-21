@@ -11,7 +11,7 @@ class ProfileVC: BaseViewController<ProfileVM> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.viewDidLoad()
     }
 
 

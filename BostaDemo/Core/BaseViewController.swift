@@ -48,10 +48,16 @@ class BaseViewController<VM: BaseViewModel>: UIViewController {
                     self?.showLoadingIndicator()
                 case .success, .failure:
                     self?.hideLoadingIndicator()
+                    self?.reloadUI()
                 }
             }
             .store(in: &cancellables)
     }
+        
+    open func reloadUI() {
+        fatalError("Please override bind function")
+    }
+
     
     // MARK: - Loading Indicator Management
     

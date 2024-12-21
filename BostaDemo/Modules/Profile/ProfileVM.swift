@@ -37,11 +37,22 @@ class ProfileVM: BaseViewModel {
         } receiveValue: {[weak self] users in
             self?.state = .success
             self?.user = users.randomElement()
-            print(users)
-            print("@@@@@@@@@@@@@@@@")
-            print(self?.user)
+            self?.fetchAlbums()
         }.store(in: &cancellables)
-
+    }
+    
+    private func fetchAlbums() {
+        albumsUseCase
+            .execute(with: user?.id ?? 0)
+            .sink { completion in
+                switch completion {
+                case .finished: print("Sucess")
+                case .failure(let error): print("error: \(error)")
+                }
+        } receiveValue: {[weak self] albums in
+            self?.albums = albums
+            self?.state = .success
+        }.store(in: &cancellables)
     }
     
 }

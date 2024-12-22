@@ -10,7 +10,8 @@ import UIKit
 
 class AlbumDetailsDataSrc: NSObject {
     let viewModel: AlbumDetailsVM
-    
+    var navigateImageDetails: ((Photo) -> Void)?
+
     init(viewModel: AlbumDetailsVM) {
         self.viewModel = viewModel
     }
@@ -33,6 +34,7 @@ extension AlbumDetailsDataSrc: UICollectionViewDataSource {
 //MARK: - Delegate
 extension AlbumDetailsDataSrc: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        let photo = viewModel.filteredPhotos[indexPath.item]
+        navigateImageDetails?(photo)
     }
 }

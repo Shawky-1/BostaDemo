@@ -8,16 +8,17 @@
 import UIKit
 
 class AlbumDetailsVC: BaseViewController<AlbumDetailsVM> {
-
+    
     //MARK: - Properties
     @IBOutlet weak var collectionView: UICollectionView!
     private lazy var albumDetailsDataSrc: AlbumDetailsDataSrc = AlbumDetailsDataSrc(viewModel: viewModel)
     private var searchController: UISearchController!
-
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
+        bindDataSrc()
         setupUI()
     }
     
@@ -25,23 +26,28 @@ class AlbumDetailsVC: BaseViewController<AlbumDetailsVM> {
         collectionView.reloadData()
     }
     
-
+    private func bindDataSrc() {
+        albumDetailsDataSrc.navigateImageDetails = { [weak self] photo in
+            self?.navigateToImageDetails(with: photo)
+        }
+    }
+    
 }
 
 //MARK: - Setup Functions
 extension AlbumDetailsVC {
     
-    func setupUI() {
+    private func setupUI() {
         self.title = viewModel.album.title
         setupCollectionView()
         setupSearchBar()
     }
-
-    func setupCollectionView() {
+    
+    private func setupCollectionView() {
         collectionView.dataSource = albumDetailsDataSrc
-        collectionView.dataSource = albumDetailsDataSrc
+        collectionView.delegate = albumDetailsDataSrc
         collectionView.register(cell: PhotosCell.self)
-
+        
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = .zero
         layout.minimumInteritemSpacing = 0
@@ -53,9 +59,9 @@ extension AlbumDetailsVC {
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         collectionView.collectionViewLayout = layout
         
-
+        
     }
-
+    
 }
 
 //MARK: - Search controller
@@ -66,12 +72,21 @@ extension AlbumDetailsVC: UISearchResultsUpdating {
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
     }
-
+    
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
         viewModel.filterPhotos(with: text)
     }
     
-    
+}
+
+//MARK: - Navigation
+extension AlbumDetailsVC {
+    private func navigateToImageDetails(with photo: Photo) {
+        let imageViewer = ImageViewerVC(photo: photo)
+        present(imageViewer, animated: true)
+        //        imageViewerVC.modalPresentationStyle = .fullScreen
+        //        navigationController?.pushViewController(imageViewerVC, animated: true)
+    }
 }

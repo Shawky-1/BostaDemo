@@ -16,6 +16,7 @@ class Repository {
 }
 
 extension Repository {
+    //MARK: - Remote functions
     func fetchUsers() -> AnyPublisher<[User], Error> {
         guard let request = RequestBuilder.buildRequest(baseURL: EndPoint.baseURL, path: "/users") else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
@@ -34,7 +35,7 @@ extension Repository {
     
     func fetchPhotos(with query: Int) -> AnyPublisher<[Photo], Error> {
         guard let request = RequestBuilder.buildRequest(baseURL: EndPoint.baseURL,
-                                                        path: "/albums",
+                                                        path: "/photos",
                                                         parameters: ["albumId" : "\(query)"]) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }

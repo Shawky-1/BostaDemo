@@ -28,6 +28,7 @@ class ProfileVM: BaseViewModel {
         fetchUsers()
     }
     
+    //MARK: - Private functions
     private func fetchUsers() {
         usersUseCase.execute().sink { completion in
             switch completion {

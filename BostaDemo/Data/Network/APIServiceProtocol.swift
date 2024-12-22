@@ -9,5 +9,4 @@ import Foundation
 import Combine
 
 protocol APIServiceProtocol {
-    func request<T: Decodable>(with request: URLRequest) -> AnyPublisher<T, Error>
-}
+    func request<T>(with request: APIEndpoints) -> AnyPublisher<T, any Error> where T: Decodable}

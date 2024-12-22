@@ -86,7 +86,5 @@ extension AlbumDetailsVC {
     private func navigateToImageDetails(with photo: Photo) {
         let imageViewer = ImageViewerVC(photo: photo)
         present(imageViewer, animated: true)
-        //        imageViewerVC.modalPresentationStyle = .fullScreen
-        //        navigationController?.pushViewController(imageViewerVC, animated: true)
     }
 }

@@ -18,32 +18,20 @@ class Repository {
 extension Repository {
     //MARK: - Remote functions
     func fetchUsers() -> AnyPublisher<[User], Error> {
-        guard let request = RequestBuilder.buildRequest(baseURL: EndPoint.baseURL, path: "/users") else {
-            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
-        }
-        return remoteDataService.request(with: request)
+        return remoteDataService.request(with: .getUsers)
     }
     
     func fetchAlbums(with query: Int) -> AnyPublisher<[Album], Error> {
-        guard let request = RequestBuilder.buildRequest(baseURL: EndPoint.baseURL,
-                                                        path: "/albums",
-                                                        parameters: ["userId" : "\(query)"]) else {
-            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
-        }
-        return remoteDataService.request(with: request)
+        return remoteDataService.request(with: .getAlbums(userId: query))
     }
     
     func fetchPhotos(with query: Int) -> AnyPublisher<[Photo], Error> {
-        guard let request = RequestBuilder.buildRequest(baseURL: EndPoint.baseURL,
-                                                        path: "/photos",
-                                                        parameters: ["albumId" : "\(query)"]) else {
-            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
-        }
-        return remoteDataService.request(with: request)
+        return remoteDataService.request(with: .getPhotos(albumId: query))
     }
 
 }
 
+//MARK: - Create Remote Repo
 extension Repository{
     static func create() -> Repository {
         let remoteDataService = APIService()

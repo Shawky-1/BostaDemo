@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A137FAA02D185B07008B4305 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = A137FA9F2D185B07008B4305 /* CombineMoya */; };
+		A137FAA22D185B07008B4305 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A137FAA12D185B07008B4305 /* Moya */; };
 		A18FAC582D1782ED00AAB679 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A18FAC572D1782ED00AAB679 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A137FAA02D185B07008B4305 /* CombineMoya in Frameworks */,
 				A18FAC582D1782ED00AAB679 /* Kingfisher in Frameworks */,
+				A137FAA22D185B07008B4305 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +73,8 @@
 			name = BostaDemo;
 			packageProductDependencies = (
 				A18FAC572D1782ED00AAB679 /* Kingfisher */,
+				A137FA9F2D185B07008B4305 /* CombineMoya */,
+				A137FAA12D185B07008B4305 /* Moya */,
 			);
 			productName = BostaDemo;
 			productReference = A18FABFA2D1782A500AAB679 /* BostaDemo.app */;
@@ -101,6 +107,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A18FAC562D1782ED00AAB679 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A137FA9E2D185B07008B4305 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = A18FA7892D16FEC600AAB679;
 			projectDirPath = "";
@@ -331,6 +338,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A137FA9E2D185B07008B4305 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 		A18FAC562D1782ED00AAB679 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -342,6 +357,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A137FA9F2D185B07008B4305 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A137FA9E2D185B07008B4305 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		A137FAA12D185B07008B4305 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A137FA9E2D185B07008B4305 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		A18FAC572D1782ED00AAB679 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A18FAC562D1782ED00AAB679 /* XCRemoteSwiftPackageReference "Kingfisher" */;
